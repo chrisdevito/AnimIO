@@ -1,0 +1,99 @@
+QWidget
+{
+    background-color: rgb(68, 68, 68);
+}
+
+QListWidget
+{
+    background-color: rgb(60, 60, 60);
+    color: rgb(239,240,241);
+    font: 11pt;
+}
+
+QListWidget::item:selected
+{
+    background-color: rgb(61, 174, 233);
+    color: rgb(229,230,231);
+}
+
+QListWidget::item:hover
+{
+    color: rgb(210,210,210);
+}
+
+QPushButton
+{
+    color: rgb(239,240,241);
+    background-color: rgb(65, 65, 65);
+    border-width: 1px;
+    border-color: #76797C;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 2px;
+    outline: none;
+    font: 11pt;
+}
+
+QPushButton:focus
+{
+    border-width: 2px;
+    color: white;
+}
+
+QPushButton:pressed
+{
+    padding-top: -15px;
+    padding-bottom: -17px;
+}
+
+QPushButton::hover
+{
+    border-width: 2px;
+    border-color: rgb(61, 174, 233);
+    color: rgb(210, 210, 210);
+}
+
+QSpinBox
+{
+    font: 11pt;
+    color: rgb(239,240,241);
+    border-style: solid;
+    border-color: rgb(61, 174, 233);
+    background-color: rgb(60, 60, 60);
+}
+
+QSpinBox::hover
+{
+    border-width: 2px;
+}
+
+QLabel
+{
+    font: 10pt;
+    color: rgb(235, 235, 235);
+    border-color: rgb(61, 174, 233);
+}
+
+QLineEdit
+{
+    font: 11pt;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(60, 60, 60);
+    background-color: rgb(60, 60, 60);
+    color: rgb(239, 240, 241);
+}
+
+QLineEdit:hover
+{
+    border-color: rgb(61, 174, 233);
+    border-width: 2px;
+}
+
+QToolTip
+{
+    color: rgb(239,240,241);
+    background-color: rgb(68, 68, 68);
+    border: 1px
+    solid white;
+}
