@@ -7,6 +7,11 @@ How to Install
 - After extraction, drag and drop the setup.py (found in the AnimIO directory) into any open motion builder window and select execute script.
 - This will install it into your PythonStartup directory.
 
+
+How to Run
+-------------
+Drop this code in a button/menu or run it from the Python Editor.
+
 .. code-block:: python
     :name: AnimIO.py
 
