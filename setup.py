@@ -6,7 +6,6 @@ import pyfbsdk
 
 this_package = os.path.abspath(os.path.dirname(__file__))
 this_path = partial(os.path.join, this_package)
-application_path = pyfbsdk.FBSystem().ApplicationPath
 
 
 def setup():
