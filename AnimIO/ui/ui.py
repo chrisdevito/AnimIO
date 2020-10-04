@@ -2,7 +2,7 @@ from __future__ import absolute_import
 import os
 from functools import partial
 from AnimIO.packages.Qt import (QtWidgets, QtCore)
-from AnimIO import api
+from AnimIO import (api, LOG)
 
 this_package = os.path.abspath(os.path.dirname(__file__))
 this_path = partial(os.path.join, this_package)
@@ -77,8 +77,8 @@ class UI(QtWidgets.QDialog):
         Adds callbacks to widgets
         """
         self.add_obj_btn.clicked.connect(self.add_selection)
-        self.export_btn.clicked.connect(self.export_anim)
         self.import_btn.clicked.connect(self.import_anim)
+        self.export_btn.clicked.connect(self.export_anim)
 
     def add_tooltips(self):
         """
@@ -93,16 +93,40 @@ class UI(QtWidgets.QDialog):
         current_sel = api.get_selected()
 
         if current_sel:
-            self.obj_line.setText(current_sel[0].name())
+            selected = current_sel[0].Name
+            self.obj_line.setText(selected)
+            LOG.debug("Added {0} to ".format(selected))
 
     def import_anim(self):
         """
         Import animation onto selected item
         """
-        pass
+        file_browser = FileDialog(
+            parent=self, view_mode=QtWidgets.QFileDialog.ExistingFile)
+
+        if file_browser.exec_():
+            file_names = file_browser.selectedFiles()
 
     def export_anim(self):
         """
-        Import animation onto selected item
+        Export animation onto selected item
         """
-        pass
+        file_browser = FileDialog(parent=self)
+
+        if file_browser.exec_():
+            file_names = file_browser.selectedFiles()
+
+
+class FileDialog(QtWidgets.QFileDialog):
+    """
+    Subclass of QFileDialog with preferred attributes
+    """
+    def __init__(
+        self, parent=None,
+            view_mode=QtWidgets.QFileDialog.AnyFile):
+
+        super(FileDialog, self).__init__(parent)
+
+        self.setNameFilter("JSON (*.json)")
+        self.setFileMode(view_mode)
+        self.setViewMode(QtWidgets.QFileDialog.Detail)
