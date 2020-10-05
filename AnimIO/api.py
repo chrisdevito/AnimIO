@@ -1,12 +1,22 @@
+from __future__ import absolute_import
+
 import json
-import pyfbsdk
-import pythonidelib
+
+try:
+    import pyfbsdk
+    import pythonidelib
+except ImportError:
+    pass
+
 from AnimIO import LOG
 
 
 def flush_output(func):
     """
     Quick decorator wrapper to flush output after code is run
+
+    :param func: function to execute
+    :type func: function
 
     :return: wrapped function
     :rtype: function

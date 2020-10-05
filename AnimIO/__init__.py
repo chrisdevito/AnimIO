@@ -46,4 +46,5 @@ def get_logger(debug=False):
 # get logging object
 LOG = get_logger(debug=False)
 
+# import show to make execution easier
 from AnimIO.utils import show

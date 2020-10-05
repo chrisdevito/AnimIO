@@ -13,6 +13,7 @@ project_root = os.path.dirname(cwd)
 # This lets us ensure that the source package is imported, and that its
 # version is used.
 sys.path.insert(0, project_root)
+import AnimIO
 
 # -- General configuration ---------------------------------------------
 
