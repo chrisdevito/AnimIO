@@ -2,11 +2,8 @@ from __future__ import absolute_import
 
 import json
 
-try:
-    import pyfbsdk
-    import pythonidelib
-except ImportError:
-    pass
+import pyfbsdk
+import pythonidelib
 
 from AnimIO import LOG
 

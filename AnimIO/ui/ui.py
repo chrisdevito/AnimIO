@@ -3,10 +3,7 @@ from __future__ import absolute_import
 import os
 from functools import partial
 from AnimIO import (api, LOG)
-try:
-    from AnimIO.packages.Qt import (QtWidgets, QtCore)
-except ImportError:
-    pass
+from AnimIO.packages.Qt import (QtWidgets, QtCore)
 
 this_package = os.path.abspath(os.path.dirname(__file__))
 this_path = partial(os.path.join, this_package)
