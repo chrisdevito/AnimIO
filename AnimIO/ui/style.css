@@ -3,9 +3,27 @@ QWidget
     background-color: rgb(68, 68, 68);
 }
 
+QMenuBar
+{
+    color: rgb(239, 240, 241);
+    font: 11pt;
+}
+
+QMenu::item
+{
+    color: rgb(239, 240, 241);
+    font: 11pt;
+}
+
+QToolBar::item:hover
+{
+    border-width: 1px;
+    border-color: #76797C;
+}
+
 QPushButton
 {
-    color: rgb(239,240,241);
+    color: rgb(239, 240, 241);
     background-color: rgb(65, 65, 65);
     border-width: 1px;
     border-color: #76797C;
@@ -35,18 +53,28 @@ QPushButton::hover
     color: rgb(210, 210, 210);
 }
 
-QDoubleSpinBox
+QSpinBox
 {
     font: 11pt;
-    color: rgb(239,240,241);
+    color: rgb(239, 240, 241);
     border-style: solid;
     border-color: rgb(61, 174, 233);
     background-color: rgb(60, 60, 60);
 }
 
-QDoubleSpinBox::hover
+QSpinBox::hover
 {
     border-width: 2px;
+}
+
+QSpinBox::enabled
+{
+    color: rgb(239,240,241);
+}
+
+QSpinBox::disabled
+{
+    color: rgb(120, 120, 120);
 }
 
 QLabel
@@ -54,6 +82,16 @@ QLabel
     font: 11pt;
     color: rgb(235, 235, 235);
     border-color: rgb(61, 174, 233);
+}
+
+QLabel::disabled
+{
+    color: rgb(150,150,150);
+}
+
+QLabel::enabled
+{
+    color: rgb(235, 235, 235);
 }
 
 QLineEdit
@@ -74,7 +112,7 @@ QLineEdit:hover
 
 QToolTip
 {
-    color: rgb(239,240,241);
+    color: rgb(239, 240, 241);
     background-color: rgb(68, 68, 68);
     border: 1px
     solid white;
